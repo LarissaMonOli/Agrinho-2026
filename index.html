@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site educativo sobre a redução do desmatamento na pecuária brasileira: tecnologias, políticas, iniciativas sustentáveis e o futuro do setor." />
+  <meta name="author" content="Projeto Pecuária Verde" />
+  <title>Pecuária Verde — Redução do Desmatamento na Pecuária</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#topo" class="logo" aria-label="Pecuária Verde - Início">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="32" height="32"><path fill="currentColor" d="M16 2c-4 6-9 9-9 16a9 9 0 0 0 18 0c0-7-5-10-9-16Zm0 8c2 3 5 5 5 9a5 5 0 0 1-10 0c0-4 3-6 5-9Z"/></svg>
+        </span>
+        <span class="logo-text">Pecuária<strong>Verde</strong></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#impacto">Impacto</a></li>
+          <li><a href="#tecnologias">Tecnologias</a></li>
+          <li><a href="#politicas">Políticas</a></li>
+          <li><a href="#iniciativas">Iniciativas</a></li>
+          <li><a href="#futuro">Futuro</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema claro e escuro" title="Alternar tema">
+          <span class="icon-sun" aria-hidden="true">☀</span>
+          <span class="icon-moon" aria-hidden="true">☾</span>
+        </button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow reveal">Pecuária sustentável • Brasil</p>
+        <h1 class="reveal">Produzir mais.<br/><span class="accent">Desmatar menos.</span></h1>
+        <p class="hero-sub reveal">É possível conciliar uma pecuária produtiva e competitiva com a preservação das nossas florestas. Conheça o caminho para um campo mais verde.</p>
+        <div class="hero-cta reveal">
+          <a href="#impacto" class="btn btn-primary">Começar a explorar</a>
+          <a href="#quiz" class="btn btn-ghost">Testar conhecimento</a>
+        </div>
+        <ul class="hero-stats reveal" aria-label="Indicadores">
+          <li><strong class="counter" data-target="12">0</strong><span>milhões de hectares com potencial de recuperação</span></li>
+          <li><strong class="counter" data-target="80">0</strong><span>% de aumento na produtividade com ILPF</span></li>
+          <li><strong class="counter" data-target="30">0</strong><span>% de redução de emissões previstas</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== IMPACTO ===================== -->
+    <section class="section" id="impacto">
+      <div class="container two-col">
+        <div class="col-text reveal">
+          <p class="section-tag">01 — Diagnóstico</p>
+          <h2>O impacto da pecuária sobre as florestas</h2>
+          <p>A pecuária possui enorme importância econômica para o Brasil, sendo responsável por milhões de empregos diretos e indiretos, além de representar uma das principais atividades do agronegócio nacional. O país possui um dos maiores rebanhos bovinos do mundo e ocupa posição de destaque na exportação de carne bovina. Apesar dessa relevância, a expansão desordenada das áreas de pastagem está diretamente ligada ao avanço do desmatamento, principalmente na Amazônia e no Cerrado.</p>
+          <p>Grande parte desse desmatamento ocorre porque muitas propriedades utilizam sistemas extensivos de baixa produtividade, em que uma grande área é necessária para manter poucos animais. Em diversas regiões, áreas florestais são queimadas para a formação de pastagens, causando degradação do solo, perda da biodiversidade e emissão de gases de efeito estufa.</p>
+          <p>O desmatamento ilegal também prejudica a imagem da pecuária brasileira no mercado internacional. Muitos países e empresas passaram a exigir produtos com origem sustentável, pressionando produtores e frigoríficos a adotarem práticas responsáveis. Reduzir o desmatamento deixou de ser apenas uma questão ambiental — é uma necessidade estratégica para a competitividade do setor.</p>
+          <div class="card-grid">
+            <article class="mini-card"><h4>Solo degradado</h4><p>Pastagens mal manejadas perdem fertilidade e produtividade em poucos anos.</p></article>
+            <article class="mini-card"><h4>Clima alterado</h4><p>O desmatamento reduz a umidade do ar e desorganiza o regime de chuvas.</p></article>
+            <article class="mini-card"><h4>Biodiversidade</h4><p>Espécies da Amazônia e Cerrado perdem habitat a cada hectare aberto.</p></article>
+          </div>
+        </div>
+        <div class="col-image reveal">
+          <img src="img/impacto.png" alt="Área de pastagem aberta cercada por floresta densa, vista aérea" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TECNOLOGIAS ===================== -->
+    <section class="section alt" id="tecnologias">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-tag">02 — Soluções</p>
+          <h2>Tecnologias e práticas sustentáveis</h2>
+          <p class="lead">A modernização da pecuária é uma das principais soluções para diminuir a pressão sobre as florestas. Diversas tecnologias permitem produzir mais carne em áreas menores, evitando a abertura de novas pastagens.</p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <span class="feature-num">01</span>
+            <h3>Recuperação de pastagens</h3>
+            <p>Correção do solo, plantio de capins resistentes e manejo adequado devolvem produtividade a áreas degradadas — sem novos desmatamentos.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">02</span>
+            <h3>Rotação de pastagens</h3>
+            <p>O gado é movimentado entre áreas para permitir a recuperação da vegetação, aumentando produtividade e reduzindo custos.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">03</span>
+            <h3>Confinamento eficiente</h3>
+            <p>O confinamento e o semi-confinamento permitem maior produção em espaços reduzidos, diminuindo a necessidade de expansão territorial.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">04</span>
+            <h3>Integração Lavoura-Pecuária-Floresta (ILPF)</h3>
+            <p>Combina árvores, agricultura e pecuária na mesma área. As árvores sequestram carbono, dão sombra ao gado e conservam solo e água — enquanto o produtor diversifica a renda.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">05</span>
+            <h3>Tecnologia de monitoramento</h3>
+            <p>Sensores, drones e imagens de satélite acompanham o solo, o manejo do gado e identificam áreas degradadas e ilegalmente desmatadas.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">06</span>
+            <h3>Nutrição de baixa emissão</h3>
+            <p>Suplementos alimentares desenvolvidos por pesquisas científicas reduzem a emissão de metano pelos bovinos.</p>
+          </article>
+        </div>
+
+        <figure class="figure-wide reveal">
+          <img src="img/tecnologias.png" alt="Drone sobrevoando pastagem com gado e árvores em sistema integrado" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== POLÍTICAS ===================== -->
+    <section class="section" id="politicas">
+      <div class="container two-col reverse">
+        <div class="col-text reveal">
+          <p class="section-tag">03 — Governança</p>
+          <h2>Políticas ambientais e responsabilidade das empresas</h2>
+          <p>Governos, organizações ambientais e empresas passaram a atuar de forma mais intensa no combate ao desmatamento associado à pecuária. No Brasil, o <strong>Código Florestal</strong> estabelece regras sobre preservação ambiental dentro das propriedades rurais, incluindo áreas de preservação permanente e reservas legais.</p>
+          <p>Programas governamentais como o <strong>ABC+</strong> oferecem linhas de crédito para produtores que investem em recuperação de pastagens, sistemas integrados e tecnologias sustentáveis, ajudando pequenos e médios produtores a modernizar suas propriedades.</p>
+          <p>Grandes frigoríficos adotam <strong>rastreabilidade</strong> para verificar a origem do gado e impedir a compra de animais vindos de áreas desmatadas ilegalmente. O monitoramento por satélite acompanha fazendas fornecedoras em tempo real.</p>
+          <p>Certificações ambientais ganharam importância no mercado internacional. Consumidores estão cada vez mais atentos à origem dos alimentos, e empresas comprometidas com sustentabilidade conquistam credibilidade e acesso a mercados mais exigentes na Europa e na América do Norte.</p>
+          <ul class="check-list">
+            <li>Código Florestal e reservas legais</li>
+            <li>Programa ABC+ de crédito sustentável</li>
+            <li>Rastreabilidade da cadeia produtiva</li>
+            <li>Certificações ambientais reconhecidas</li>
+          </ul>
+        </div>
+        <div class="col-image reveal">
+          <img src="img/politicas.png" alt="Documento de política ambiental sobre fundo de floresta" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INICIATIVAS ===================== -->
+    <section class="section alt" id="iniciativas">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-tag">04 — Casos reais</p>
+          <h2>Iniciativas sustentáveis no Brasil</h2>
+          <p class="lead">Diversos projetos provam que é possível desenvolver a pecuária sem destruir florestas. Conheça exemplos que combinam produtividade e preservação.</p>
+        </header>
+
+        <div class="cases">
+          <article class="case reveal">
+            <h3>Amazônia produtiva</h3>
+            <p>Produtores que adotaram manejo intensivo sustentável dobraram a produtividade usando a mesma área de pastagem — mais carne, sem derrubar novas árvores.</p>
+          </article>
+          <article class="case reveal">
+            <h3>Recuperação de áreas degradadas</h3>
+            <p>Propriedades plantaram árvores em áreas improdutivas, recuperaram nascentes e adotaram sistemas integrados, restaurando o equilíbrio ambiental.</p>
+          </article>
+          <article class="case reveal">
+            <h3>Corredores ecológicos</h3>
+            <p>Fazendas mantêm faixas de vegetação que permitem a circulação de animais silvestres, preservando a biodiversidade local.</p>
+          </article>
+          <article class="case reveal">
+            <h3>Proteção das águas</h3>
+            <p>Cercamento de rios e nascentes evita contaminação pelo gado e garante maior proteção dos recursos hídricos.</p>
+          </article>
+          <article class="case reveal">
+            <h3>ILPF no Centro-Oeste</h3>
+            <p>Fazendas com Integração Lavoura-Pecuária-Floresta registraram aumento de produtividade, conforto térmico e redução de emissões de carbono.</p>
+          </article>
+          <article class="case reveal">
+            <h3>Cooperativas e capacitação</h3>
+            <p>Associações rurais promovem treinamentos e assistência técnica, acelerando a adoção de tecnologias mais eficientes e menos agressivas ao meio ambiente.</p>
+          </article>
+        </div>
+
+        <figure class="figure-wide reveal">
+          <img src="img/iniciativas.png" alt="Sistema silvipastoril com gado pastando sob árvores" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== FUTURO ===================== -->
+    <section class="section" id="futuro">
+      <div class="container two-col">
+        <div class="col-text reveal">
+          <p class="section-tag">05 — Horizonte</p>
+          <h2>A preservação como futuro da pecuária</h2>
+          <p>A redução do desmatamento é essencial para garantir o futuro da própria pecuária. As mudanças climáticas já afetam diretamente a produção agropecuária por meio de secas prolongadas, aumento das temperaturas e irregularidade das chuvas. A preservação das florestas mantém o equilíbrio climático, protege os recursos hídricos e conserva a fertilidade do solo.</p>
+          <p>Além dos benefícios ambientais, a sustentabilidade fortalece a economia rural. Propriedades com práticas modernas apresentam maior produtividade, menor desperdício e melhores resultados financeiros. O mercado consumidor valoriza cada vez mais produtos responsáveis.</p>
+          <p>A sociedade tem papel essencial ao apoiar empresas comprometidas e cobrar ações contra o desmatamento ilegal. <strong>Reduzir o desmatamento não significa diminuir a produção, mas sim produzir de maneira mais eficiente, inteligente e sustentável</strong> — garantindo benefícios para as próximas gerações.</p>
+        </div>
+        <div class="col-image reveal">
+          <img src="img/futuro.jpg" alt="Silhueta de produtor rural e gado ao pôr do sol em paisagem preservada" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUIZ ===================== -->
+    <section class="section alt" id="quiz">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-tag">Interativo</p>
+          <h2>Teste seus conhecimentos</h2>
+          <p class="lead">Responda 7 perguntas rápidas sobre pecuária sustentável e descubra o quanto você sabe.</p>
+        </header>
+
+        <div class="quiz-card reveal">
+          <div id="quizProgress" class="quiz-progress" aria-hidden="true"><span></span></div>
+          <div id="quizContent">
+            <p class="quiz-step" id="quizStep">Pergunta 1 de 7</p>
+            <h3 id="quizQuestion">Carregando…</h3>
+            <ul id="quizOptions" class="quiz-options"></ul>
+            <div class="quiz-feedback" id="quizFeedback" role="status" aria-live="polite"></div>
+            <div class="quiz-controls">
+              <button id="quizNext" class="btn btn-primary" disabled>Próxima</button>
+            </div>
+          </div>
+          <div id="quizResult" class="quiz-result" hidden>
+            <h3>Seu resultado</h3>
+            <p class="quiz-score"><span id="quizScore">0</span> / <span id="quizTotal">7</span></p>
+            <p id="quizMessage"></p>
+            <button id="quizRestart" class="btn btn-ghost">Refazer quiz</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERIA ===================== -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-tag">Galeria</p>
+          <h2>Imagens que contam a história</h2>
+          <p class="lead">Clique em uma imagem para ampliar.</p>
+        </header>
+
+        <div class="gallery">
+          <button class="gallery-item reveal" data-src="img/galeria1.jpg" data-caption="A floresta viva — base da regulação climática"><img src="img/galeria1.jpg" alt="Folhas verdes com gotas de orvalho" loading="lazy" /></button>
+          <button class="gallery-item reveal" data-src="img/galeria3.png" data-caption="Plantio de mudas para recuperação"><img src="img/galeria3.png" alt="Mãos plantando muda" loading="lazy" /></button>
+          <button class="gallery-item reveal" data-src="img/galeria4.jpg" data-caption="Monitoramento por satélite da Amazônia"><img src="img/galeria4.jpg" alt="América do Sul vista do espaço" loading="lazy" /></button>
+          <button class="gallery-item reveal" data-src="img/galeria2.jpg" data-caption="Sistema silvipastoril em operação"><img src="img/galeria2.jpg" alt="Gado sob árvores" loading="lazy" /></button>
+          <button class="gallery-item reveal" data-src="img/futuro.jpg" data-caption="O futuro: produção em harmonia com a paisagem"><img src="img/futuro.jpg" alt="Pôr do sol no campo" loading="lazy" /></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#topo" class="logo logo-footer">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28"><path fill="currentColor" d="M16 2c-4 6-9 9-9 16a9 9 0 0 0 18 0c0-7-5-10-9-16Zm0 8c2 3 5 5 5 9a5 5 0 0 1-10 0c0-4 3-6 5-9Z"/></svg>
+          </span>
+          <span class="logo-text">Pecuária<strong>Verde</strong></span>
+        </a>
+        <p class="footer-about">Conteúdo educativo sobre como reduzir o desmatamento na pecuária brasileira por meio de tecnologia, políticas e boas práticas.</p>
+      </div>
+      <div>
+        <h4>Conteúdo</h4>
+        <ul>
+          <li><a href="#impacto">Impacto da pecuária</a></li>
+          <li><a href="#tecnologias">Tecnologias sustentáveis</a></li>
+          <li><a href="#politicas">Políticas ambientais</a></li>
+          <li><a href="#iniciativas">Iniciativas brasileiras</a></li>
+          <li><a href="#futuro">Futuro do setor</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Interaja</h4>
+        <ul>
+          <li><a href="#quiz">Quiz educativo</a></li>
+          <li><a href="#galeria">Galeria de imagens</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sobre</h4>
+        <p>Projeto autoral construído por Larissa, com HTML, CSS e JavaScript puros.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <small>© <span id="year"></span> Todos os direitos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== MODAL ===================== -->
+  <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Visualização da imagem" hidden>
+    <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+    <figure>
+      <img id="modalImage" src="" alt="" />
+      <figcaption id="modalCaption"></figcaption>
+    </figure>
+  </div>
+
+  <button id="toTop" class="to-top" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
