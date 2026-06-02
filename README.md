@@ -1,6 +1,6 @@
 # Pecuária Verde — Redução do Desmatamento na Pecuária
 
-Site educativo, moderno e responsivo sobre a redução do desmatamento na pecuária brasileira. Construído **100% com HTML5, CSS3 e JavaScript puro**, sem frameworks, bibliotecas externas ou estilos inline.
+Site educativo, moderno e responsivo sobre a redução do desmatamento na pecuária brasileira. Construído **100% com HTML5, CSS3 e JavaScript**, sem frameworks, bibliotecas externas ou estilos inline.
 
 ## ✨ Objetivo
 
@@ -24,64 +24,10 @@ Mostrar, de forma clara e visualmente atraente, que é possível conciliar uma p
 - **Galeria de imagens** com **modal** (fechável por clique fora ou tecla `Esc`).
 - Botão flutuante **"Voltar ao topo"**.
 
-## 📁 Estrutura de pastas
-
-```
-pecuaria-verde/
-├── index.html
-├── README.md
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── img/
-│   ├── hero.jpg
-│   ├── impacto.jpg
-│   ├── tecnologia.jpg
-│   ├── politicas.jpg
-│   ├── iniciativas.jpg
-│   ├── futuro.jpg
-│   ├── galeria1.jpg
-│   ├── galeria2.jpg
-│   ├── galeria3.jpg
-│   └── galeria4.jpg
-└── assets/        (reservado para fontes, ícones ou recursos extras)
-```
-
 ## ▶️ Como rodar
 
-Não há build, dependências ou servidor obrigatório. Existem duas opções:
-
-### Opção 1 — Abrir direto no navegador
-1. Baixe ou extraia a pasta do projeto.
-2. Dê duplo clique em `index.html`.
-
-### Opção 2 — Servidor local (recomendado)
-Para evitar restrições de CORS com imagens, sirva a pasta com um servidor estático qualquer:
-
-```bash
-# Python 3
-cd pecuaria-verde
-python3 -m http.server 8080
-
-# ou Node.js (com npx)
-npx serve .
-```
-
-Depois acesse `http://localhost:8080` no navegador.
-
-## ♿ Acessibilidade
-
-- HTML semântico e landmarks (`header`, `main`, `footer`, `nav`).
-- Botões com `aria-label`, `aria-expanded` e `aria-controls`.
-- Modal com `role="dialog"` e `aria-modal`.
-- Suporte a `prefers-reduced-motion`.
-- Contraste adequado em ambos os temas.
-
-## 📚 Conteúdo
-
-Todo o conteúdo textual é fiel à pesquisa fornecida sobre "Redução do Desmatamento na Pecuária", organizado em cards, listas e seções para melhor leitura.
+Clique no link abaixo do about para acessar o site.
 
 ## 📝 Licença
 
-Projeto autoral, criado para fins **educacionais**. Sinta-se livre para estudar, adaptar e compartilhar.
+Projeto autoral, feito por Larissa do 3º ano F.
