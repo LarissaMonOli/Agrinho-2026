@@ -15,6 +15,102 @@
   "use strict";
 
   /* ---------------------------------------------------------
+   * 0) FEED DE NOTÍCIAS — mock data + renderização dinâmica
+   * ------------------------------------------------------- */
+  // Notícias baseadas em fatos verificados — fontes indicadas em cada card
+  const noticias = [
+    {
+      tag: "Desmatamento",
+      titulo: "Desmatamento cai 32,4% no Brasil em 2024, aponta MapBiomas",
+      resumo: "Pela primeira vez desde 2019, todos os biomas brasileiros registraram queda simultânea no desmatamento. Foram desmatados 1,24 milhão de hectares, contra 1,8 milhão em 2023. O Pantanal liderou a recuperação, com queda de quase 60%.",
+      data: "15 mai. 2025",
+      icone: "🌎",
+      fonte: "MapBiomas / Agência Brasil",
+      link: "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2025-05/desmatamento-no-brasil-caiu-324-em-2024"
+    },
+    {
+      tag: "Clima",
+      titulo: "Brasil reduz 16,7% das emissões de gases de efeito estufa em 2024",
+      resumo: "Foi a maior queda desde 2009, segundo o SEEG (Observatório do Clima), puxada pelo recuo expressivo do desmatamento na Amazônia (-11%) e no Cerrado (-11,5%). A pecuária sustentável ganhou protagonismo nesse resultado.",
+      data: "Fev. 2026",
+      icone: "♻️",
+      fonte: "MilkPoint / Observatório do Clima",
+      link: "https://www.milkpoint.com.br/colunas/despertar-regenerativo/brasil-reduz-167-das-emissoes-e-a-pecuaria-ganha-protagonismo-climatico-240260/"
+    },
+    {
+      tag: "ILPF",
+      titulo: "Embrapa conclui maior experimento mundial com sistemas ILPF",
+      resumo: "A Embrapa Agrossilvipastoril finalizou o primeiro ciclo de 12 anos do maior experimento global com Integração Lavoura-Pecuária-Floresta, realizado em Sinop (MT), gerando base técnica para decisões de manejo em todo o país.",
+      data: "Jul. 2024",
+      icone: "🌳",
+      fonte: "Canal Rural / Embrapa",
+      link: "https://www.canalrural.com.br/agricultura/embrapa-finaliza-maior-pesquisa-do-mundo-com-integracao-lavoura-pecuaria-floresta/"
+    },
+    {
+      tag: "Rastreabilidade",
+      titulo: "Brasil lança Plano Nacional de Identificação Individual de Bovinos",
+      resumo: "O PNIB, lançado em dezembro de 2024 pelo Ministério da Agricultura, estabelece metas de rastreabilidade individual de todos os bovinos até 2032, atendendo às exigências do mercado europeu (EUDR) e reforçando a segurança sanitária.",
+      data: "Dez. 2024",
+      icone: "🏷️",
+      fonte: "Minerva Foods / MAPA",
+      link: "https://myminerva.minervafoods.com/ate-2032-todo-rebanho-bovino-brasileiro-deve-estar-rastreado-individualmente/"
+    },
+    {
+      tag: "Mercado",
+      titulo: "EUDR: Brasil corre para adequar rastreabilidade da carne à UE",
+      resumo: "A Regulação Europeia Contra o Desmatamento (EUDR), que entra em vigor em dezembro de 2026, exige rastreabilidade completa e geolocalizada dos animais. Produtores e frigoríficos intensificam ações para não perder acesso ao mercado europeu.",
+      data: "Mai. 2026",
+      icone: "🇪🇺",
+      fonte: "MeioNews / CNN Brasil",
+      link: "https://www.meionews.com/noticias/brasil-corre-contra-o-tempo-para-atender-exigencia-ambiental-da-ue-563149"
+    },
+    {
+      tag: "Política",
+      titulo: "Plano ABC+ completa uma década de agricultura de baixo carbono",
+      resumo: "O Plano ABC (Agricultura de Baixo Carbono) completou dez anos de implementação no Brasil, com metas de recuperar 30 milhões de hectares de pastagens degradadas até 2030, conforme o compromisso climático nacional (NDC).",
+      data: "Mar. 2024",
+      icone: "🌿",
+      fonte: "Embrapa / Agência Gov",
+      link: "https://agenciagov.ebc.com.br/noticias/202403/plano-abc-marca-uma-decada-de-inovacao-em-agricultura-sustentavel-no-brasil"
+    },
+    {
+      tag: "Sustentabilidade",
+      titulo: "Pecuária respondeu por 70% das emissões do desmatamento em 2024",
+      resumo: "Segundo a Exame, a pecuária foi responsável por cerca de 70% das emissões ligadas ao desmatamento no Brasil em 2024. O dado reforça que não é necessário desmatar novas áreas para garantir a produção de carne, bastando intensificar o uso das pastagens existentes.",
+      data: "Jan. 2025",
+      icone: "📊",
+      fonte: "Exame / SEEG",
+      link: "https://exame.com/colunistas/ideias-renovaveis/a-pecuaria-respondeu-por-54-das-emissoes-do-brasil-em-2024/"
+    }
+  ];
+
+  const newsGrid = document.getElementById("newsGrid");
+
+  if (newsGrid) {
+    noticias.forEach((noticia, i) => {
+      const card = document.createElement("article");
+      card.className = "news-card reveal";
+      card.innerHTML = `
+        <div class="news-card-img-placeholder" aria-hidden="true">${noticia.icone}</div>
+        <div class="news-card-body">
+          <span class="news-card-tag">${noticia.tag}</span>
+          <h3>${noticia.titulo}</h3>
+          <p>${noticia.resumo}</p>
+          <div class="news-card-footer">
+            <span class="news-card-date">${noticia.data} · ${noticia.fonte}</span>
+            <a href="${noticia.link}" class="news-card-link" target="_blank" rel="noopener noreferrer">Ler fonte →</a>
+          </div>
+        </div>
+      `;
+      newsGrid.appendChild(card);
+
+      // Registrar no IntersectionObserver de reveal para animação de entrada
+      // (feito após declaração do revealObserver, ver bloco 3)
+      card.dataset.pendingReveal = "true";
+    });
+  }
+
+  /* ---------------------------------------------------------
    * 1) MENU MOBILE
    * ------------------------------------------------------- */
   const menuBtn = document.getElementById("menuToggle");
@@ -70,6 +166,12 @@
     { threshold: 0.12 }
   );
   revealEls.forEach((el) => revealObserver.observe(el));
+
+  // Registrar cards de notícias criados dinamicamente no reveal observer
+  document.querySelectorAll(".news-card[data-pending-reveal]").forEach((card) => {
+    card.removeAttribute("data-pending-reveal");
+    revealObserver.observe(card);
+  });
 
   /* ---------------------------------------------------------
    * 4) CONTADORES ANIMADOS
